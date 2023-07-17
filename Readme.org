@@ -1,0 +1,6 @@
+* Launch guix development enviornment
+
+#+begin_src sh
+  # Specify path to channel (which is currently in libicepic repo)
+  guix shell -L ../libicepic -m manifest.scm 
+#+end_src

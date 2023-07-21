@@ -1,0 +1,60 @@
+{
+  "nodes": {
+    "libicepic": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1689925581,
+        "narHash": "sha256-ooqLCUMZbyz+w/XUbM/iSSaBWNh3e2OchOKL9lFM2Xg=",
+        "ref": "refs/heads/master",
+        "rev": "7095373462b23f2d55189442cf842a56bff61189",
+        "revCount": 3,
+        "type": "git",
+        "url": "file:///home/icepic/guix/packages/libicepic"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///home/icepic/guix/packages/libicepic"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1689689050,
+        "narHash": "sha256-jDIzJpiqNL54Z+/TO6ZGL0JDEk3bixLelmSNjglLgLU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "aa2fc5e1ea3ed4fd9606b881bbfaa8173cb51c05",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1689925568,
+        "narHash": "sha256-ytk3dTHQmgU5E7VaqjOAAGGpjSSzqfxYvErXDhJbLSo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "acf7891bf8de021e304cd2f218f1d38a418d7d79",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "libicepic": "libicepic",
+        "nixpkgs": "nixpkgs_2"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

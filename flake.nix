@@ -5,21 +5,21 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
-    # libicepic = {
-    #   url = "/home/icepic/guix/packages/libicepic";
-    # };
+    libicepic = {
+       url = "/home/icepic/guix/packages/libicepic";
+    };
   };
 
 
 
-  outputs = { self, nixpkgs }: {
+  outputs = { self, nixpkgs, libicepic }: {
 
     # after apps
 
     devShells.x86_64-linux.default =  with import nixpkgs { system = "x86_64-linux"; };
       mkShell {
         buildInputs =  [ stdenv.cc.cc.lib cmake ];
-        packages = with pkgs; [cmake libusb1];
+        packages = with pkgs; [cmake libusb1 libicepic.packages.x86_64-linux.default];
       };
 
 
@@ -31,7 +31,7 @@
         pname = "icepic";
         version = "0.1.0";
         src = ./.;
-        buildInputs = [ stdenv.cc.cc.lib cmake];
+        buildInputs = [ stdenv.cc.cc.lib cmake libusb1 libicepic.packages.x86_64-linux.default];
 
         meta = with lib; {
           homepage = "http://icepic.de";
